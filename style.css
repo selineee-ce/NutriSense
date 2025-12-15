@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+
+.main, .stApp, [data-testid="stAppViewContainer"], [data-testid="stAppViewBlockContainer"] {
+    background: linear-gradient(135deg, #FFF5E6 0%, #FFE8CC 100%) !important;
+}
+
+.block-container {
+    background: transparent !important;
+    padding-top: 1.5rem !important;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #FFF0DC !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 40px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 2px !important;
+    margin-top: -10px !important;
+    margin-bottom: 0 !important;
+}
+
+.header-text {
+    text-align: left;
+}
+
+.header-title {
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+.header-title > span:first-of-type,
+.header-title > span:nth-child(1) {
+    color: #614426 !important;
+    -webkit-text-fill-color: #614426 !important;
+}
+
+.header-title > span:last-of-type,
+.header-title > span:nth-child(2) {
+    color: #89a132 !important;
+    -webkit-text-fill-color: #89a132 !important;
+}
+
+.header-title > span:first-of-type .big-letter,
+.header-title > span:first-of-type .small-caps {
+    color: #614426 !important;
+    -webkit-text-fill-color: #614426 !important;
+}
+
+.header-title > span:last-of-type .big-letter,
+.header-title > span:last-of-type .small-caps {
+    color: #89a132 !important;
+    -webkit-text-fill-color: #89a132 !important;
+}
+
+.logo-img {
+    width: 100px !important;
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+.big-letter {
+    font-size: 48px !important;
+    font-weight: 800 !important;
+}
+
+.small-caps {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif !important;
+    color: #6B4423 !important;
+    font-size: 15px !important;
+    text-align: left !important;
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+    font-weight: 500 !important;
+    opacity: 0.85 !important;
+}
+
+.stButton > button, 
+button[kind="primary"], 
+button[kind="secondary"],
+button[type="submit"],
+.stFormSubmitButton > button,
+div[data-testid="stFormSubmitButton"] > button {
+    background: linear-gradient(135deg, #89a132 0%, #6d8128 100%) !important;
+    color: white !important;
+    border-radius: 25px !important;
+    padding: 12px 40px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    border: none !important;
+    box-shadow: 0 6px 12px rgba(137, 161, 50, 0.4) !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.stButton > button:hover, 
+button[kind="primary"]:hover, 
+button[kind="secondary"]:hover,
+button[type="submit"]:hover,
+.stFormSubmitButton > button:hover,
+div[data-testid="stFormSubmitButton"] > button:hover {
+    background: linear-gradient(135deg, #6d8128 0%, #5a6a20 100%) !important;
+    box-shadow: 0 8px 16px rgba(137, 161, 50, 0.6) !important;
+    transform: translateY(-2px) !important;
+    color: white !important;
+}
+
+.stButton > button:active, 
+button[kind="primary"]:active,
+.stFormSubmitButton > button:active,
+div[data-testid="stFormSubmitButton"] > button:active {
+    background: linear-gradient(135deg, #5a6a20 0%, #4a5818 100%) !important;
+    color: white !important;
+}
+
+div[data-testid="stForm"] {
+    background: white !important;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    border: 3px solid #FFD89C !important;
+    margin-top: 10px !important;
+}
+
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+input[type="text"],
+input[type="number"] {
+    background-color: #FFFBF5 !important;
+    border: 2px solid #FFD89C !important;
+    border-radius: 5px !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    color: #3E2723 !important;
+    -webkit-text-fill-color: #3E2723 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #89a132 !important;
+    box-shadow: 0 0 0 3px rgba(137, 161, 50, 0.2) !important;
+    background-color: #FFFBF5 !important;
+    color: #3E2723 !important;
+    -webkit-text-fill-color: #3E2723 !important;
+    outline: none !important;
+}
+
+.stTextInput > div > div > input:hover,
+.stNumberInput > div > div > input:hover,
+input[type="text"]:hover,
+input[type="number"]:hover {
+    border-color: #89a132 !important;
+    background-color: #FFFBF5 !important;
+    color: #3E2723 !important;
+}
+
+.stTextInput > div > div > input::placeholder,
+.stNumberInput > div > div > input::placeholder {
+    color: #8D6E63 !important;
+    opacity: 0.6 !important;
+}
+
+.stNumberInput button,
+.stNumberInput button svg {
+    color: #3E2723 !important;
+    fill: #3E2723 !important;
+    background-color: transparent !important;
+}
+
+.stNumberInput button:hover {
+    background-color: #FFE8CC !important;
+}
+
+.stTextInput > div,
+.stNumberInput > div {
+    background-color: transparent !important;
+}
+
+.stTextInput > label, 
+.stNumberInput > label, 
+.stRadio > label {
+    color: #3E2723 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.stRadio > div,
+.stRadio div[role="radiogroup"] {
+    background-color: #FFFBF5 !important;
+    padding: 10px !important;
+    border-radius: 12px !important;
+    border: 2px solid #FFD89C !important;
+}
+
+.stRadio label,
+.stRadio div[role="radiogroup"] label,
+.stRadio div[role="radiogroup"] label span,
+.stRadio p {
+    background-color: transparent !important;
+    color: #2C1810 !important;
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.stRadio div[role="radiogroup"] label:hover {
+    background-color: rgba(137, 161, 50, 0.1) !important;
+    color: #2C1810 !important;
+}
+
+.stRadio div[data-baseweb="radio"] > div:first-child {
+    background-color: #89a132 !important;
+    border-color: #89a132 !important;
+}
+
+.metric-card {
+    background: white !important;
+    padding: 25px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+    text-align: center !important;
+    border: 2px solid #FFE8CC !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3E2723 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+h2 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.stAlert {
+    border-radius: 15px !important;
+}
+
+div[data-baseweb="notification"] {
+    border-radius: 15px !important;
+}
+
+.stSuccess {
+    background-color: #E8F5E9 !important;
+    border-left: 5px solid #4CAF50 !important;
+    color: #3E2723 !important;
+}
+
+.stWarning {
+    background-color: #FFF3E0 !important;
+    border-left: 5px solid #FF9800 !important;
+    color: #3E2723 !important;
+}
+
+.stInfo {
+    background-color: #E3F2FD !important;
+    border-left: 5px solid #2196F3 !important;
+    color: #3E2723 !important;
+}
+
+.stError {
+    background-color: #FFEBEE !important;
+    border-left: 5px solid #F44336 !important;
+    color: #3E2723 !important;
+}
+
+[data-testid="stDataFrame"],
+.stDataFrame,
+div[data-testid="stDataFrame"] > div,
+.dataframe-container {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    background-color: white !important;
+}
+
+[data-testid="stDataFrame"] table,
+.stDataFrame table,
+table {
+    background-color: white !important;
+    color: #3E2723 !important;
+}
+
+[data-testid="stDataFrame"] th,
+.stDataFrame th,
+table th {
+    background-color: #89a132 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 12px !important;
+    border: none !important;
+}
+
+[data-testid="stDataFrame"] td,
+.stDataFrame td,
+table td {
+    background-color: #FFFBF5 !important;
+    color: #3E2723 !important;
+    padding: 10px !important;
+    border: 1px solid #FFE8CC !important;
+}
+
+[data-testid="stDataFrame"] tr:nth-child(even) td,
+.stDataFrame tr:nth-child(even) td,
+table tr:nth-child(even) td {
+    background-color: #FFF5E6 !important;
+}
+
+[data-testid="stDataFrame"] tr:hover td,
+.stDataFrame tr:hover td,
+table tr:hover td {
+    background-color: #FFE8CC !important;
+}
+
+div[class*="st-"] {
+    color: #3E2723 !important;
+}
+
+.stCaption {
+    color: #8D6E63 !important;
+    font-style: italic !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+div[data-testid="stForm"] > div > div > div > small,
+.stForm small {
+    display: none !important;
+}
+
+p, span, div, label {
+    color: #3E2723 !important;
+}
+
+.streamlit-expanderHeader {
+    background-color: #FFFBF5 !important;
+    color: #3E2723 !important;
+    border-radius: 10px !important;
+}
+
+.streamlit-expanderContent {
+    background-color: white !important;
+    border: 2px solid #FFD89C !important;
+    border-radius: 10px !important;
+}
+
+.card-title {
+    text-align: center !important;
+    color: #3E2723 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-bottom: 5px !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.card-value {
+    text-align: center !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.who-result {
+    padding: 15px !important;
+    border-radius: 10px !important;
+    margin: 10px 0 !important;
+}
+
+.who-result p {
+    color: #3E2723 !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.who-warning {
+    background-color: #FFF3E0 !important;
+    border-left: 5px solid #FF9800 !important;
+}
+
+.who-success {
+    background-color: #E8F5E9 !important;
+    border-left: 5px solid #4CAF50 !important;
+}
+
+.result-caption {
+    color: #8D6E63 !important;
+    font-size: 14px !important;
+    font-style: italic !important;
+    margin-top: 10px !important;
+    font-family: 'Inter', sans-serif !important;
+}
