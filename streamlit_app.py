@@ -116,6 +116,46 @@ def plot_growth_with_history(child_name, current_age, current_height, sex, who_d
         label="Standar WHO",
         alpha=0.7
     )
+
+    ax.plot(
+        who_data["age_month"],
+        who_data["median"] - 2 * who_data["sd"],
+        color="#FF9800",
+        linewidth=2.5,
+        linestyle='--',
+        label="Berisiko Stunting",
+        alpha=0.7
+    )
+    
+    ax.plot(
+        who_data["age_month"],
+        who_data["median"] - 3 * who_data["sd"],
+        color="#F44336",
+        linewidth=2.5,
+        linestyle='--',
+        label="Stunting",
+        alpha=0.7
+    )
+
+    ax.plot(
+        who_data["age_month"],
+        who_data["median"] + 2 * who_data["sd"],
+        color="#AB47BC",
+        linewidth=2.5,
+        linestyle='--',
+        label="Berisiko Obesitas",
+        alpha=0.7
+    )
+    
+    ax.plot(
+        who_data["age_month"],
+        who_data["median"] + 3 * who_data["sd"],
+        color="#7B1FA2",
+        linewidth=2.5,
+        linestyle='--',
+        label="Obesitas",
+        alpha=0.7
+    )
     
     if not history_df.empty:
         history_sorted = history_df.sort_values("age_month")
@@ -162,7 +202,8 @@ def render_result_cards(pred_label, pred_proba, record_count):
         html = card_template.replace("{title}", "Status Gizi").replace("{color}", status_color).replace("{value}", pred_label)
         st.markdown(html, unsafe_allow_html=True)
     
-    with col2:
+    #pakk, tingkat keyakinan ini maksudnya kemungkinan dia akan kena stunting yaa~
+    with col2: 
         html = card_template.replace("{title}", "Tingkat Keyakinan").replace("{color}", "#2196F3").replace("{value}", f"{pred_proba*100:.1f}%")
         st.markdown(html, unsafe_allow_html=True)
     
@@ -240,7 +281,7 @@ def main():
         pred_encoded = model.predict(X_new)[0]
         pred_proba = model.predict_proba(X_new).max()
         
-        label_map_rev = {0: "Normal", 1: "Berisiko", 2: "Stunted"}
+        label_map_rev = {0: "Normal", 1: "Berisiko", 2: "Stunting"}
         pred_label = label_map_rev[pred_encoded]
         
         render_spacer()
